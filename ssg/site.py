@@ -8,5 +8,6 @@ class Site:
 
     def create_dir(self, path):
         directory = self.dest / path.relative_to(self.source)
-        
+        directory.makedir(parents=True, exist_ok=True)
+
 
